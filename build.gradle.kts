@@ -11,11 +11,13 @@ base.archivesName = "LiteFunPlugin"
 
 repositories {
     mavenCentral()
-    maven(url = "https://hub.spigotmc.org/nexus/content/repositories/snapshots/")
+    maven("https://repo.codemc.org/repository/maven-public")
+    maven("https://hub.spigotmc.org/nexus/content/repositories/snapshots")
 }
 
 dependencies {
     compileOnly("org.spigotmc:spigot-api:${minecraftVersion}-R0.1-SNAPSHOT")
+    compileOnly("net.milkbowl.vault:VaultUnlockedAPI:2.4")
 }
 
 tasks.withType<ProcessResources> {

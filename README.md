@@ -2,7 +2,7 @@
 This is the official plugin of LiteFunMC. Created to do all of other plugins and customized for the best experience in LiteFun Survival Economy minecraft server.
 
 **Added/Planned things:**
- - [ ] Economy (Vault compat)
+ - [x] Economy (Vault compat)
  - [ ] Jobs
  - [ ] Skills
  - [ ] Taxes
