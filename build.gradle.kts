@@ -3,7 +3,7 @@ plugins {
 }
 
 val pluginVersion: String by extra
-val minecraftVersion: String by extra
+val minecraftVersion = libs.paper.api.get().version!!.split("-").first()
 
 group = "dev.tonimatas"
 version = pluginVersion
