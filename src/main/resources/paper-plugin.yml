@@ -1,0 +1,14 @@
+name: LiteFunPlugin
+version: ${pluginVersion}
+main: dev.tonimatas.litefun.LiteFunPlugin
+description: The official plugin of LiteFun
+api-version: ${minecraftVersion}
+bootstrapper: dev.tonimatas.litefun.LiteFunBootstrap
+loader: dev.tonimatas.litefun.LiteFunLoader
+
+dependencies:
+  server:
+    Vault:
+      load: BEFORE
+      required: true
+      join-classpath: true

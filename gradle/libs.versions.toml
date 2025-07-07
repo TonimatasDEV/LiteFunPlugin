@@ -1,0 +1,10 @@
+[versions]
+paper-api = "1.21.7-R0.1-SNAPSHOT"
+vault = "2.4"
+
+[libraries]
+paper-api = { group = "io.papermc.paper", name = "paper-api", version.ref = "paper-api" }
+vault = { group = "net.milkbowl.vault", name = "VaultUnlockedAPI", version.ref = "vault" }
+
+[bundles]
+dependencies = ["paper-api", "vault"]

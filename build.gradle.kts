@@ -12,22 +12,28 @@ base.archivesName = "LiteFunPlugin"
 repositories {
     mavenCentral()
     maven("https://repo.codemc.org/repository/maven-public")
-    maven("https://hub.spigotmc.org/nexus/content/repositories/snapshots")
+    maven("https://repo.papermc.io/repository/maven-public/")
 }
 
 dependencies {
-    compileOnly("org.spigotmc:spigot-api:${minecraftVersion}-R0.1-SNAPSHOT")
-    compileOnly("net.milkbowl.vault:VaultUnlockedAPI:2.4")
+    compileOnly(libs.bundles.dependencies)
 }
 
-tasks.withType<ProcessResources> {
-    inputs.property("pluginVersion", version)
+tasks.processResources {
+    val properties = mapOf("pluginVersion" to version, "minecraftVersion" to minecraftVersion)
+    inputs.properties(properties)
 
-    filesMatching("plugin.yml") {
-        expand("pluginVersion" to version)
+    filesMatching("paper-plugin.yml") {
+        expand(properties)
     }
 }
 
-tasks.withType<JavaCompile> {
+java {
+    toolchain.languageVersion.set(JavaLanguageVersion.of(21))
+}
+
+tasks.compileJava {
+    sourceCompatibility = "21"
+    targetCompatibility = "21"
     options.encoding = "UTF-8"
 }

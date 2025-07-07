@@ -1,7 +1,0 @@
-main: dev.tonimatas.litefun.LiteFunPlugin
-name: LiteFunPlugin
-version: ${pluginVersion}
-api-version: 1.13
-description: The official plugin of LiteFun
-author: TonimatasDEV
-prefix: LiteFun
