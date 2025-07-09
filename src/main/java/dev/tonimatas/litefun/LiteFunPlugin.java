@@ -1,5 +1,7 @@
 package dev.tonimatas.litefun;
 
+import dev.tonimatas.litefun.skillsystem.config.SkillConfigLoader;
+import dev.tonimatas.litefun.skillsystem.skill.SkillManager;
 import dev.tonimatas.litefun.util.Messages;
 import net.milkbowl.vault2.economy.Economy;
 import org.bukkit.plugin.RegisteredServiceProvider;
@@ -23,6 +25,9 @@ public class LiteFunPlugin extends JavaPlugin {
             getServer().getPluginManager().disablePlugin(this);
             return;
         }
+
+        SkillConfigLoader.loadSkills(getDataFolder());
+        Messages.sendConsole("[LiteFun] - Skills cargadas: " + SkillManager.getAllSkills().size());
     }
 
     @Override
