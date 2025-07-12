@@ -1,4 +1,4 @@
-package dev.tonimatas.litefun.skillsystem.effect;
+package dev.tonimatas.litefun.skills;
 
 public class SkillEffect {
     private final String type;

@@ -1,4 +1,4 @@
-package dev.tonimatas.litefun.skillsystem.stat;
+package dev.tonimatas.litefun.skills;
 
 public class Stat {
     private final String name;
